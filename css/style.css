@@ -8,6 +8,11 @@
 .clear-fix {
     clear: both;
 }
+.clear-fix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
 /* Set typography */
 h1 {
     font-size: 1.8rem;
@@ -21,6 +26,7 @@ h3 {
     font-size: 1.4rem;
     line-height: 1.6rem;
 }
+/* Base font size */
 h4 {
     font-size: 1rem;
     line-height: 1.2rem;
@@ -32,4 +38,102 @@ h5 {
 h6 {
     font-size: 0.8rem;
     line-height: 1rem;
+}
+/* Layouts */
+.container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#app-row {
+    background-color: #fff;
+    height: 80px;
+}
+#app-row>.container {
+    height: 100%;
+    padding: 10px 0;
+}
+#app-row>.container>#logo {
+    height: 60px;
+    float: left;
+}
+#app-row>.container>.wrapper {
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+#app-row>.container>.wrapper>.row:first-child {
+    background-color: #fff;
+}
+#nav-lang>li {
+    font-size: 0.8rem;
+    float: left;
+}
+#nav-lang>li>a {
+    text-decoration: none;
+    color: black;
+}
+#nav-lang>li:not(#nav-lang>li:last-child) {
+    padding-right: 20px;
+}
+#nav-lang>li>a:hover {
+    text-decoration: underline;
+    color: #ff9d1e;
+}
+#nav-lang {
+    float: right;
+}
+#app-row>.container>.wrapper>.row:last-child {
+    padding-top: 20px;
+}
+#nav-main {
+    float: left;
+}
+#nav-main>nav>li {
+    margin-top: 5px;
+    padding: 0 24px;
+    float: left;
+}
+#nav-main>nav>li>a {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-decoration: none;
+    color: black;
+}
+#nav-main>nav>li>a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#smi-container {
+    float: right;
+}
+#smi-container>ul>li {
+    background-color: green;
+    float: left;
+    margin-left: 10px;
+}
+#smi-container>ul>li>a>ion-icon {
+    padding: 5px;
+    font-size: 18px;
+}
+#smi-container>ul>li:nth-child(1) {
+    background-color: #3f4da1;
+}
+#smi-container>ul>li:nth-child(2) {
+    background-color: #57a0d7;
+}
+#smi-container>ul>li:nth-child(3) {
+    background-color: #57a0d7;
+}
+#smi-container>ul>li:nth-child(4) {
+    background-color: #d74527;
+}
+#smi-container>ul>li>a>ion-icon {
+    color: white;
+}
+#nav-row {
+    background-color: yellowgreen;
+}
+#misc-row {
+    background-color: tomato;
 }
