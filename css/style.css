@@ -131,9 +131,69 @@ h6 {
 #smi-container>ul>li>a>ion-icon {
     color: white;
 }
+
 #nav-row {
-    background-color: yellowgreen;
+    background-color: black;
+    height: 50px;
+}
+#nav-row>.container {
+    height: 100%;
+}
+#nav-row>.container>nav>li>a {
+    float: left;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 0.85rem;
+    padding: 15px 8px;
+    color: white;
+    position: relative;
+}
+#nav-row>.container>nav>li>a::after {
+    opacity: 0;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ff9d1e;
+}
+#nav-row>.container>nav>li>a:hover::after {
+    opacity: 1;
+}
+#nav-row>.container>nav>li>a:hover {
+    color: black;
+    background-color: #ff9d1e;
+    cursor: pointer;
 }
 #misc-row {
-    background-color: tomato;
+    background-color: #ffde00;
+    height: 50px;
+}
+#misc-row>.container {
+    height: 100%;
+}
+#misc-row>.container>ul>li {
+    margin-top: 5px;
+    margin-left: 3px;
+    float: right;
+    height: 38px;
+    background-color: #107ECE;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 black;;
+}
+#misc-row>.container>ul>li:hover {
+    background-color: #0865a9;
+    cursor: pointer;
+}
+#misc-row>.container>ul>li>a {
+    font-size: 0.85rem;
+    line-height: 40px;
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
 }
